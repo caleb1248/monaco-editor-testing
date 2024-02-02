@@ -6,7 +6,15 @@ import {
 } from '@codingame/monaco-vscode-files-service-override';
 import * as vscode from 'vscode';
 import { ILogService, StandaloneServices } from 'vscode/services';
+import './features/filesystem';
 import './setup';
+import '@codingame/monaco-vscode-theme-defaults-default-extension';
+import '@codingame/monaco-vscode-javascript-default-extension';
+import '@codingame/monaco-vscode-typescript-basics-default-extension';
+import '@codingame/monaco-vscode-typescript-language-features-default-extension';
+import '@codingame/monaco-vscode-typescript-basics-default-extension';
+import '@codingame/monaco-vscode-theme-defaults-default-extension';
+import '@codingame/monaco-vscode-theme-seti-default-extension';
 // import './features/filesystem';
 
 // @ts-ignore

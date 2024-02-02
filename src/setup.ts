@@ -6,15 +6,7 @@ import getThemeServiceOverride from '@codingame/monaco-vscode-theme-service-over
 import getLanguagesServiceOverride from '@codingame/monaco-vscode-languages-service-override/languages';
 import getExtensionsServiceOverride from '@codingame/monaco-vscode-extensions-service-override';
 import getViewsServiceOverride from '@codingame/monaco-vscode-views-service-override/views';
-import getFilesServiceOverride from '@codingame/monaco-vscode-files-service-override';
 import getKeybindingsServiceOverride from '@codingame/monaco-vscode-keybindings-service-override/keybindings';
-import '@codingame/monaco-vscode-theme-defaults-default-extension';
-import '@codingame/monaco-vscode-javascript-default-extension';
-import '@codingame/monaco-vscode-typescript-basics-default-extension';
-import '@codingame/monaco-vscode-typescript-language-features-default-extension';
-import '@codingame/monaco-vscode-typescript-basics-default-extension';
-import '@codingame/monaco-vscode-theme-defaults-default-extension';
-import '@codingame/monaco-vscode-theme-seti-default-extension';
 import 'vscode/localExtensionHost';
 import { Worker } from './tools/crossOriginWorker';
 import { workerConfig } from './tools/extHostWorker';
@@ -71,8 +63,9 @@ self.MonacoEnvironment = {
   },
 };
 
+console.log('eee');
+
 await initializeMonacoServices({
-  ...getFilesServiceOverride(),
   ...getLanguagesServiceOverride(),
   ...getTextmateServiceOverride(),
   ...getThemeServiceOverride(),
