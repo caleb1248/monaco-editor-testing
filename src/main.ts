@@ -1,38 +1,35 @@
-import './style.css';
-import * as monaco from 'monaco-editor';
+import "./style.css";
+import { createModelReference } from "vscode/monaco";
 import {
   registerFileSystemOverlay,
   HTMLFileSystemProvider,
-} from '@codingame/monaco-vscode-files-service-override';
-import * as vscode from 'vscode';
-import { ILogService, StandaloneServices } from 'vscode/services';
-import './features/filesystem';
-import './setup';
-import '@codingame/monaco-vscode-theme-defaults-default-extension';
-import '@codingame/monaco-vscode-javascript-default-extension';
-import '@codingame/monaco-vscode-typescript-basics-default-extension';
-import '@codingame/monaco-vscode-typescript-language-features-default-extension';
-import '@codingame/monaco-vscode-typescript-basics-default-extension';
-import '@codingame/monaco-vscode-theme-defaults-default-extension';
-import '@codingame/monaco-vscode-theme-seti-default-extension';
-// import './features/filesystem';
+} from "@codingame/monaco-vscode-files-service-override";
+import * as vscode from "vscode";
+import { ILogService, StandaloneServices } from "vscode/services";
+import "./features/filesystem";
+import "./setup";
+import "@codingame/monaco-vscode-theme-defaults-default-extension";
+import "@codingame/monaco-vscode-javascript-default-extension";
+import "@codingame/monaco-vscode-typescript-basics-default-extension";
+import "@codingame/monaco-vscode-typescript-language-features-default-extension";
+import "@codingame/monaco-vscode-typescript-basics-default-extension";
+import "@codingame/monaco-vscode-theme-defaults-default-extension";
+import "@codingame/monaco-vscode-theme-seti-default-extension";
 
 // @ts-ignore
-const modelRef = await monaco.editor.createModelReference(
-  monaco.Uri.file('/tmp/test.js')
-);
+const modelRef = await createModelReference(vscode.Uri.file("/tmp/test.js"));
 
 await Promise.all([
   vscode.workspace.openTextDocument(modelRef.object.textEditorModel!.uri),
-  vscode.workspace.openTextDocument(monaco.Uri.file('/tmp/test_readonly.js')), // open the file so vscode sees it's locked
+  vscode.workspace.openTextDocument(vscode.Uri.file("/tmp/test_readonly.js")), // open the file so vscode sees it's locked
 ]);
 
-document.querySelector('#filesystem')!.addEventListener('click', async () => {
+document.querySelector("#filesystem")!.addEventListener("click", async () => {
   const dirHandle = await window.showDirectoryPicker();
 
   const htmlFileSystemProvider = new HTMLFileSystemProvider(
     undefined,
-    'unused',
+    "unused",
     StandaloneServices.get(ILogService)
   );
   await htmlFileSystemProvider.registerDirectoryHandle(dirHandle);
@@ -43,10 +40,10 @@ document.querySelector('#filesystem')!.addEventListener('click', async () => {
   });
 });
 
-document.querySelector('#run')!.addEventListener('click', () => {
+document.querySelector("#run")!.addEventListener("click", () => {
   void vscode.debug.startDebugging(undefined, {
-    name: 'Test',
-    request: 'attach',
-    type: 'javascript',
+    name: "Test",
+    request: "attach",
+    type: "javascript",
   });
 });

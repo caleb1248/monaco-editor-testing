@@ -10,30 +10,27 @@
     "postinstall": "monaco-treemending"
   },
   "dependencies": {
-    "@codingame/monaco-vscode-javascript-default-extension": "^1.85.6",
-    "@codingame/monaco-vscode-keybindings-service-override": "^2.0.2",
-    "@codingame/monaco-vscode-language-detection-worker-service-override": "^2.0.2",
-    "@codingame/monaco-vscode-languages-service-override": "^1.85.6",
-    "@codingame/monaco-vscode-textmate-service-override": "^1.85.6",
-    "@codingame/monaco-vscode-theme-defaults-default-extension": "^1.85.6",
-    "@codingame/monaco-vscode-theme-service-override": "^1.85.6",
-    "@codingame/monaco-vscode-theme-seti-default-extension": "^2.0.2",
-    "@codingame/monaco-vscode-typescript-basics-default-extension": "^1.85.6",
-    "@codingame/monaco-vscode-typescript-language-features-default-extension": "^1.85.6",
-    "@codingame/monaco-vscode-views-service-override": "^2.0.2",
+    "@codingame/monaco-vscode-javascript-default-extension": "^2.0.3",
+    "@codingame/monaco-vscode-keybindings-service-override": "^2.0.3",
+    "@codingame/monaco-vscode-language-detection-worker-service-override": "^2.0.3",
+    "@codingame/monaco-vscode-languages-service-override": "^2.0.3",
+    "@codingame/monaco-vscode-textmate-service-override": "^2.0.3",
+    "@codingame/monaco-vscode-theme-defaults-default-extension": "^2.0.3",
+    "@codingame/monaco-vscode-theme-service-override": "^2.0.3",
+    "@codingame/monaco-vscode-theme-seti-default-extension": "^2.0.3",
+    "@codingame/monaco-vscode-typescript-basics-default-extension": "^2.0.3",
+    "@codingame/monaco-vscode-typescript-language-features-default-extension": "^2.0.3",
+    "@codingame/monaco-vscode-views-service-override": "^2.0.3",
     "@types/color": "^3.0.6",
     "@types/wicg-file-system-access": "^2023.10.4",
     "color": "^4.2.3",
-    "vscode": "npm:@codingame/monaco-vscode-api@^1.85.6"
+    "monaco-editor": "^0.45.0",
+    "vscode": "npm:@codingame/monaco-vscode-api@^2.0.3"
   },
   "devDependencies": {
     "@codingame/esbuild-import-meta-url-plugin": "^1.0.2",
     "@types/node": "^20.11.7",
-    "@types/react": "^18.2.37",
-    "@types/react-dom": "^18.2.15",
     "@types/vscode": "^1.85.0",
-    "@typescript-eslint/eslint-plugin": "^6.10.0",
-    "@typescript-eslint/parser": "^6.10.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.0"
   }

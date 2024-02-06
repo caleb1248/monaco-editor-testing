@@ -1,4 +1,3 @@
-import * as monaco from 'monaco-editor';
 import './tools/crossOriginWorker';
 import { initialize as initializeMonacoServices } from 'vscode/services';
 import getTextmateServiceOverride from '@codingame/monaco-vscode-textmate-service-override';
@@ -79,5 +78,3 @@ await initializeMonacoServices({
   })),
   ...getKeybindingsServiceOverride(),
 });
-
-export default monaco;
