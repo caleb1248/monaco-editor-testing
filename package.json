@@ -14,6 +14,7 @@
     "@codingame/monaco-vscode-keybindings-service-override": "^2.0.3",
     "@codingame/monaco-vscode-language-detection-worker-service-override": "^2.0.3",
     "@codingame/monaco-vscode-languages-service-override": "^2.0.3",
+    "@codingame/monaco-vscode-model-service-override": "^2.0.3",
     "@codingame/monaco-vscode-textmate-service-override": "^2.0.3",
     "@codingame/monaco-vscode-theme-defaults-default-extension": "^2.0.3",
     "@codingame/monaco-vscode-theme-service-override": "^2.0.3",

@@ -3,23 +3,9 @@ import {
   registerFileSystemOverlay,
   RegisteredReadOnlyFile,
   RegisteredMemoryFile,
-  initFile,
 } from '@codingame/monaco-vscode-files-service-override';
+
 import * as vscode from 'vscode';
-
-void initFile(
-  vscode.Uri.file('/tmp/test.js'),
-  `// import anotherfile
-let variable = 1
-function inc () {
-  variable++
-}
-
-while (variable < 5000) {
-  inc()
-  console.log('Hello world', variable);
-}`
-);
 
 const fileSystemProvider = new RegisteredFileSystemProvider(false);
 fileSystemProvider.registerFile(
@@ -115,3 +101,5 @@ h1 {
 );
 
 registerFileSystemOverlay(1, fileSystemProvider);
+
+export default true;
